@@ -29,13 +29,13 @@ A platform where anyone can share what they have learned today as a fact with a 
 
 ## Demo & Images
 
-![Homepage](./path/to/homepage-screenshot.png)  
-*Facts feed with category filters*
-
-![Fact Submission](./path/to/fact-submission-form.png)  
+![Homepage](./Demo1.jpeg)  
 *Fact submission form with validation*
 
-![Fact List](./path/to/fact-list.png)  
+![Fact Submission](./Demo2.jpeg)  
+*Facts feed with category filters*
+
+![Fact List](./Demo3.jpeg)  
 *Voting on facts and disputed fact highlighting*
 
 ---
