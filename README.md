@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Daily Dose of Learning
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A platform where anyone can share what they have learned today as a fact with a reliable source link, categorized by topics such as science, technology, entertainment, news, society, finance, etc.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Demo & Images](#demo--images)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Live Demo](#live-demo)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Click **Share a fact** to submit your daily learning with a trustworthy source.
+- Select one category for your fact.
+- Browse facts posted by others.
+- Upvote facts by clicking 👍 if you find them helpful.
+- Downvote facts by clicking ⛔️ if you think they are false.
+- Facts with more downvotes than upvotes will show a **[DISPUTED]** label and appear at the bottom.
+- Filter facts on the sidebar by categories like science, technology, finance, etc., to see facts relevant to your interest.
+- Responsive, modern React interface with real-time Supabase backend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Demo & Images
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Homepage](./path/to/homepage-screenshot.png)  
+*Facts feed with category filters*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Fact Submission](./path/to/fact-submission-form.png)  
+*Fact submission form with validation*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Fact List](./path/to/fact-list.png)  
+*Voting on facts and disputed fact highlighting*
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Frontend: React, JavaScript, HTML, CSS
+- Backend & Database: Supabase 
+- Hosting: Netlify
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+Follow these steps to get a copy of the project running locally:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Node.js (version 14 or higher recommended)
+- npm (comes with Node.js)
+- Git
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repository:
+   ```
+   git clone https://github.com/Manish614/daily-dose-of-learning.git
+   cd daily-dose-of-learning
+   ```
 
-### Analyzing the Bundle Size
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Create a `.env` file in the root directory and add your Supabase environment variables:
+   ```
+   REACT_APP_SUPABASE_URL = your_supabase_url
+   REACT_APP_SUPABASE_KEY = your_supabase_anon_public_key
+   PROJECT_URL = your_project_url
+   API_KEY = your_api_key
+   AUTHORIZATION = Bearer your_api_key 
+   ```
+   > **Important:** Use your Supabase **anon** (public) key here, not the service role key.
 
-### Making a Progressive Web App
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. Open your browser to [http://localhost:3000](http://localhost:3000) to view the app locally.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Live Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[https://daily-dose-of-learning.netlify.app/](https://daily-dose-of-learning.netlify.app/)
