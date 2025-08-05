@@ -55,27 +55,22 @@ factsList.innerHTML = "";
 loadFacts();
 
 async function loadFacts() {
-  const res = await fetch(
-    "https://ebkrbkabsdshvlelzclx.supabase.co/rest/v1/facts",
-    {
-      headers: {
-        apikey:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVia3Jia2Fic2RzaHZsZWx6Y2x4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQxNjE3NzIsImV4cCI6MjA2OTczNzc3Mn0.X6ikfDvaedNcAdpdLquNAkamciuT_8y7ZjSQuvLuvwQ",
-        authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVia3Jia2Fic2RzaHZsZWx6Y2x4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQxNjE3NzIsImV4cCI6MjA2OTczNzc3Mn0.X6ikfDvaedNcAdpdLquNAkamciuT_8y7ZjSQuvLuvwQ",
-      },
-    }
-  );
+  const projectUrl = process.env.PROJECT_URL;
+  const apiKey = process.env.API_KEY;
+  const authorization = process.env.AUTHORIZATION;
+
+  const res = await fetch(projectUrl, {
+    headers: {
+      apiKey,
+      authorization,
+    },
+  });
   const data = await res.json();
-  // console.log(data);
-  // const filteredData = data.filter((fact) => fact.category === "technology");
 
   createFactsList(data);
 }
 
 function createFactsList(dataArray) {
-  // factsList.insertAdjacentHTML("afterbegin", "<li>Jonas</li>");
-
   const htmlArr = dataArray.map(
     (fact) => `<li class="fact">
     <p>
